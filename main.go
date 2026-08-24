@@ -8,6 +8,7 @@ import (
 
 type app struct {
 	logger *slog.Logger
+	hub    *hub
 }
 
 func main() {
@@ -15,6 +16,7 @@ func main() {
 
 	app := &app{
 		logger: logger,
+		hub:    newHub(),
 	}
 
 	srv := &http.Server{
