@@ -1,7 +1,7 @@
 :root {
   font-family: system-ui, sans-serif;
   color: #222;
-  background: #fff;
+  background: #f6f7f9;
 }
 
 body {
@@ -9,6 +9,113 @@ body {
 }
 
 main {
-  padding: 4rem 1rem;
-  text-align: center;
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #d6d9de;
+  border-radius: 0.375rem;
+  background: #fff;
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.tab-active {
+  border-color: #222;
+  font-weight: 600;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e4e9;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  line-height: 1.9;
+}
+
+.muted {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Connection state, not viewer state: grey means the stream is retrying. */
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #d1d5db;
+}
+
+.dot-live {
+  background: #16a34a;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #d6d9de;
+  border-radius: 0.375rem;
+  font: inherit;
+}
+
+button[type='submit'] {
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 0.375rem;
+  background: #222;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.link {
+  margin-top: 1rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #6b7280;
+  font: inherit;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  cursor: pointer;
 }

@@ -6,9 +6,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
+      // Pass the path through rather than collapsing everything onto "/", so
+      // the backend's own routes are reachable. Same-origin in dev also means
+      // no CORS handling on the Go side.
       '/api': {
         target: 'http://localhost:8000',
-        rewrite: () => '/',
+        rewrite: (path) => path.replace(/^\/api/, '') || '/',
       },
     },
   },
