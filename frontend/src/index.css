@@ -12,3 +12,14 @@ main {
   padding: 4rem 1rem;
   text-align: center;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.viewers li,
+.reports li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}

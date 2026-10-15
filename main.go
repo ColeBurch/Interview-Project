@@ -7,14 +7,16 @@ import (
 )
 
 type app struct {
-	logger *slog.Logger
+	logger   *slog.Logger
+	presence *presence
 }
 
 func main() {
 	logger := slog.New(slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{AddSource: true}))
 
 	app := &app{
-		logger: logger,
+		logger:   logger,
+		presence: newPresence(),
 	}
 
 	srv := &http.Server{
